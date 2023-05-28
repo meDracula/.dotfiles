@@ -5,16 +5,13 @@ RC_PACKAGES:=$(shell cat rc-list.txt)
 all: plan verify_plan build
 
 plan: deps
-	stow -nvSt ~ .
+	stow -nvSt ~ */
 
 build:
-	echo "stow and stuff"
+	stow -vSt ~ */
 
-test: deps
-	echo "testing"
-
-sync:
-	echo "sync with diff stow changes"
+destory:
+	stow -vDt ~ */
 
 deps: bin/dependency.sh ${RC_PACKAGES_FILE}
 	./bin/dependency.sh $(RC_PACKAGES)

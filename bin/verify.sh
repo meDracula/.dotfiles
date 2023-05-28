@@ -14,10 +14,10 @@ which_package()  {
 	return $returncode
 }
 
-which_package stow alacritty ranger nvim tmux
+which_package "$@"
 
 if [ $? -eq 1 ]; then
-	echo "ERROR Please install all mentioned packages"
+	echo "[ ] ERROR Please install all mentioned packages"
 	exit 1
 fi
 

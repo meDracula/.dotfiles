@@ -1,0 +1,7 @@
+[user]
+	name = meDracula
+	email = me.dracula@protonmail.com
+[core]
+	editor = vim
+[init]
+	defaultBranch = main

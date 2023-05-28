@@ -3,7 +3,7 @@ DEFUALT=all
 all: require diff
 
 require: bin/verify.sh
-	./bin/verify.sh
+	./bin/verify.sh stow git alacritty ranger nvim tmux
 
 build:
 	echo "stow and stuff"

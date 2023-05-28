@@ -7,7 +7,7 @@ which_package()  {
 	do
 		which "$pkg" >/dev/null
 		if [ $? -eq 1 ]; then
-			returncode=1 
+			returncode=1
 			echo "-> Install package $pkg"
 		fi
 	done

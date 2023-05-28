@@ -1,9 +1,9 @@
 DEFUALT=all
 
-all: require diff
+all: plan build
 
-require: bin/verify.sh
-	./bin/verify.sh stow git alacritty ranger nvim tmux
+plan: deps
+	stow -nvSt ~ alacritty
 
 build:
 	echo "stow and stuff"
@@ -11,5 +11,5 @@ build:
 sync:
 	echo "sync with diff stow changes"
 
-diff:
-	stow -nvSt ~ alacritty 
+deps: bin/verify.sh
+	./bin/verify.sh stow git alacritty ranger nvim tmux

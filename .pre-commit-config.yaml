@@ -7,3 +7,8 @@ repos:
       - id: trailing-whitespace
       - id: detect-private-key
       - id: end-of-file-fixer
+
+  - repo: "https://github.com/Anadea/pre-commit-config-shellcheck"
+    rev: "0.3.4"
+    hooks:
+      - id: "pre-commit-config-shellcheck"

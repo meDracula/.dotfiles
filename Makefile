@@ -2,7 +2,7 @@ DEFUALT=all
 RC_PACKAGES_FILE:=rc-list.txt
 RC_PACKAGES:=$(shell cat rc-list.txt)
 
-all: plan build
+all: plan verify_plan build
 
 plan: deps
 	stow -nvSt ~ .
@@ -16,5 +16,8 @@ test: deps
 sync:
 	echo "sync with diff stow changes"
 
-deps: bin/verify.sh ${RC_PACKAGES_FILE}
-	./bin/verify.sh $(RC_PACKAGES)
+deps: bin/dependency.sh ${RC_PACKAGES_FILE}
+	./bin/dependency.sh $(RC_PACKAGES)
+
+verify_plan: bin/verify.sh
+	./bin/verify.sh

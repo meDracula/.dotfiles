@@ -1,0 +1,6 @@
+stow
+git
+alacritty
+ranger
+nvim
+tmux

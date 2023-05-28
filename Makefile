@@ -5,7 +5,7 @@ RC_PACKAGES:=$(shell cat rc-list.txt)
 all: plan build
 
 plan: deps
-	stow -nvSt ~ alacritty
+	stow -nvSt ~ .
 
 build:
 	echo "stow and stuff"

@@ -4,3 +4,4 @@ alacritty
 ranger
 nvim
 tmux
+starship

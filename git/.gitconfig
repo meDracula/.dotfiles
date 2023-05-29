@@ -62,20 +62,23 @@
 
     # index
     st = status
-    a  = add
     r  = reset
+
+    # stage
+    a  = add
+    ad = add .
 
     # log
     l  = log --oneline
     ls = log --stat
     lh = shortlog --summary --numbered --email
 
-	# log numbered
-	l1  = log -n 1
-	l5  = log -n 5
-	l10 = log -n 10
+    # log numbered
+    l1  = log -n 1
+    l5  = log -n 5
+    l10 = log -n 10
 
-	# log graph
+    # log graph
     lg  = log --graph --oneline
     lga = log --all --graph
     lgr = log --graph --oneline --decorate --date=relative

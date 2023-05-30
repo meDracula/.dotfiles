@@ -13,6 +13,12 @@ build:
 destory:
 	stow -vDt ~ */
 
+sync: pull plan verify_plan
+	stow -vRt ~ */
+
+pull: bin/sync.sh
+	./bin/sync.sh
+
 deps: bin/dependency.sh ${RC_PACKAGES_FILE}
 	./bin/dependency.sh $(RC_PACKAGES)
 

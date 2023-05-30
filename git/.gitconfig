@@ -9,76 +9,77 @@
 	defaultBranch = main
 
 [alias]
-    # branch
-    b  = branch
-    bc = checkout -b
-    bl = branch -v
-    bL = branch -av
-    bd = branch -d
-    bD = branch -D
-    bm = branch -m
-    bM = branch -M
-    bs = show-branch
-    bS = show-branch -a
+	# branch
+	b  = branch
+	bc = checkout -b
+	bl = branch -v
+	bL = branch -av
+	bd = branch -d
+	bD = branch -D
+	bm = branch -m
+	bM = branch -M
+	bs = show-branch
+	bS = show-branch -a
 
-    # checkout/fetch/merge/push/rebase
-    # checkout
-    co  = checkout
-    co0 = checkout HEAD --
+	# checkout
+	co  = checkout
+	co0 = checkout HEAD --
 
-    # fetch
-    f  = fetch
-    fm = pull
-    fo = fetch origin
+	# fetch
+	f  = fetch
+	fo = fetch origin
 
-    # push
-    p  = push
-    pa = push --all
-    pt = push --tags
+	# Pull
+	pl = pull
 
-    # merge
-    m = merge
+	# push
+	ph  = push
+	pha = push --all
+	pht = push --tags
 
-    # rebase
-    re  = rebase
-    rea = rebase --abort
-    rec = rebase --continue
-    rei = rebase --interactive
-    res = rebase --skip
+	# merge
+	m = merge
 
-    # commit
-    c      = commit -v
-    ca     = commit --all -v
-    cm     = commit --message
-    cam    = commit --all --message
-    camend = commit --amend --reuse-message HEAD
-    cundo  = reset --soft "HEAD^"
-    cp     = cherry-pick
+	# rebase
+	re  = rebase
+	rea = rebase --abort
+	rec = rebase --continue
+	rei = rebase --interactive
+	res = rebase --skip
 
-    # diff
-    d  = diff
-    ds = diff --staged
-    dh = diff HEAD
+	# commit
+	c      = commit -v
+	ca     = commit --all -v
+	cm     = commit --message
+	cam    = commit --all --message
+	camend = commit --amend --reuse-message HEAD
+	cundo  = reset --soft "HEAD^"
+	cp     = cherry-pick
 
-    # index
-    st = status
-    r  = reset
+	# diff
+	d  = diff
+	ds = diff --staged
+	dh = diff HEAD
 
-    # stage
-    a  = add
-    ad = add .
+	# index
+	st = status
+	r  = reset
 
-    # log
-    l  = log --oneline
-    ls = log --stat
-    lh = shortlog --summary --numbered --email
+	# stage
+	a  = add
+	ad = add .
 
-    # log numbered
-    l1  = log -n 1
-    l5  = log -n 5
-    l10 = log -n 10
+	# log
+	l  = log --oneline
+	ls = log --stat
+	lh = shortlog --summary --numbered --email
 
-    # log graph
-    lg  = log --graph --oneline
-    lga = log --all --graph
-    lgr = log --graph --oneline --decorate --date=relative
+	# log numbered
+	l1  = log -n 1
+	l5  = log -n 5
+	l10 = log -n 10
+
+	# log graph
+	lg  = log --graph --oneline
+	lga = log --all --graph
+	lgr = log --graph --oneline --decorate --date=relative

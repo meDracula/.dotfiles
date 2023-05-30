@@ -56,9 +56,9 @@
     cp     = cherry-pick
 
     # diff
-    d  = diff          # Diff working dir to index
-    ds = diff --staged # Diff index to HEAD
-    dh = diff HEAD     # Diff working dir and index to HEAD
+    d  = diff
+    ds = diff --staged
+    dh = diff HEAD
 
     # index
     st = status

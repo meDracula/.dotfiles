@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/home/dracula/.local/share/nvim/site/pack/packer/start/TrueZen.nvim",
     url = "https://github.com/Pocco81/TrueZen.nvim"
   },
+  ["aura-theme"] = {
+    loaded = true,
+    path = "/home/dracula/.local/share/nvim/site/pack/packer/start/aura-theme/packages/neovim",
+    url = "https://github.com/daltonmenezes/aura-theme"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/dracula/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
@@ -108,11 +113,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/dracula/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
-  },
-  ["nightfox.nvim"] = {
-    loaded = true,
-    path = "/home/dracula/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
-    url = "https://github.com/EdenEast/nightfox.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -147,6 +147,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Runtimepath customization
+time([[Runtimepath customization]], true)
+vim.o.runtimepath = vim.o.runtimepath .. ",/home/dracula/.local/share/nvim/site/pack/packer/start/aura-theme/packages/neovim"
+time([[Runtimepath customization]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

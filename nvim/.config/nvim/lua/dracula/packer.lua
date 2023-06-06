@@ -39,15 +39,9 @@ return require('packer').startup(function(use)
 	  {'hrsh7th/cmp-nvim-lsp'}, -- Required
 	  {'L3MON4D3/LuaSnip'},     -- Required
   	}
-})
-
-  -- ColorScheme Plugin
-  use({
-	  'EdenEast/nightfox.nvim',
-	  commit = '15f3b5837a8d07f45cbe16753fbf13630bc167a3'
   })
 
-  -- Requires Nvim Nightly
-  --use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate'})
-  --use('nvim-treesitter/playground')
+  -- ColorScheme Plugin
+  use('daltonmenezes/aura-theme')
+  --use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } -- Recommended, not required.
 end)

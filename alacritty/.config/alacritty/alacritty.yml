@@ -19,7 +19,7 @@ font:
 
 # Set Color Scheme
 import:
-  - "aura-theme.yml"
+  - "themes/github_dark_default.yml"
 
 window:
   padding:

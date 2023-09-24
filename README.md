@@ -16,3 +16,8 @@ My type of Dotfiles cocktail :cocktail: using [stow](https://www.gnu.org/softwar
     - [odt2txt](https://github.com/dstosberg/odt2txt/)
     - [djvused](https://linux.die.net/man/1/djvused)
     - gnu/gpg
+
+### Terminal Emulator
+- **Alacritty** - A fast, cross-platform, OpenGL terminal emulator
+
+Required Font: (Fira-Code)[https://fonts.google.com/specimen/Fira+Code]

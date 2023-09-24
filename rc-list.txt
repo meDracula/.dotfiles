@@ -1,10 +1,10 @@
 stow
 git
 alacritty
-lf
 nvim
 tmux
 starship
+lf
 ueberzug
 lynx
 mediainfo
@@ -15,5 +15,3 @@ atool
 odt2txt
 gpg
 djvused
-convert
-image

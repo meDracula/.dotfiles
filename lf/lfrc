@@ -6,9 +6,13 @@ set drawbox
 set hidden
 set relativenumber
 set period 1
-set cleaner '~/.config/lf/cleaner.sh'
-set previewer '~/.config/lf/scope.sh'
 set autoquit true
+
+# Previewer and cleaner
+set previewer ctpv
+set cleaner ctpvclear
+&ctpv -s $id
+&ctpvquit $id
 
 # Functions
 cmd open &{{

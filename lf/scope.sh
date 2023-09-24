@@ -12,7 +12,6 @@ image() {
 	fi
 }
 
-# shellcheck disable=SC2317
 ifub() {
 	[ -n "$DISPLAY" ] && [ -z "$WAYLAND_DISPLAY" ] && command -V ueberzug >/dev/null 2>&1
 }

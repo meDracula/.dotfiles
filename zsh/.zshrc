@@ -270,5 +270,9 @@ lfcd () {
     cd "$(command lf -print-last-dir "$@")"
 }
 
+bindkey -s '^o' '^ulfcd\n'
+
+export LF_BOOKMARK_PATH="$HOME/.config/lf/bookmarks.txt"
+
 # Starship
 eval "$(starship init zsh)"

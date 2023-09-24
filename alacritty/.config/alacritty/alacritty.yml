@@ -58,3 +58,4 @@ cursor:
 
 key_bindings:
   - { key: Return, mods: Super|Shift, action: SpawnNewInstance }
+  - { key: Space,  mods: Control, action: ToggleViMode }

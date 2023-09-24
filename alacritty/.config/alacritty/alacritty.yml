@@ -1,5 +1,5 @@
 font:
-  size: 10
+  size: 8
 
   normal:
     family: Fira Code
@@ -19,7 +19,7 @@ font:
 
 colors:
   primary:
-    background: '0x23252e'
+    background: '0x15141B'
     foreground: '0xFFFFFF'
 
   normal:
@@ -49,7 +49,7 @@ window:
   class:
     instance: Alacritty
     general: Alacritty
-  opacity: 0.8
+  opacity: 1
 
 cursor:
   style:
@@ -58,3 +58,4 @@ cursor:
 
 key_bindings:
   - { key: Return, mods: Super|Shift, action: SpawnNewInstance }
+  - { key: Space,  mods: Control, action: ToggleViMode }

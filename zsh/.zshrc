@@ -264,5 +264,11 @@ if [ -f /etc/zsh_command_not_found ]; then
 fi
 fpath+=${ZDOTDIR:-~}/.zsh_functions
 
+# lf quit change directory
+lfcd () {
+    # `command` is needed in case `lfcd` is aliased to `lf`
+    cd "$(command lf -print-last-dir "$@")"
+}
+
 # Starship
 eval "$(starship init zsh)"

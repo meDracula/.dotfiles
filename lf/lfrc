@@ -59,16 +59,7 @@ cmd rg_search ${{
     [ -n "$res" ] && lf -remote "send $id select \"$res\""
 }}
 
-# Inspect with bat
-#cmd inspect_bat ${{
-#    case $(file --mime-type -Lb $f) in
-#        text/*) lf -remote "send $id \$$EDITOR \$fx";;
-#        *) for f in $fx; do $OPENER $f > /dev/null 2> /dev/null & done;;
-#    esac
-#}}
-
 # Bindings
-map <c-h> set hidden!
 map <c-g> :rg_search
 map <c-s> :fzf_jump
 map i $LESSOPEN='| ~/.config/lf/scope.sh %s' batcat --paging=always $f

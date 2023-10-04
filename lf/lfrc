@@ -34,7 +34,7 @@ cmd bookmark_create ${{
 
 # CD fzf
 cmd fzf_jump ${{
-    res="$(fdfind --hidden -E .git/ | fzf --reverse --header='Jump to location')"
+    res="$(fdfind --hidden -E .git/ | fzf --preview 'batcat --color=always --style=numbers {}' --reverse --header='Jump to location')"
     if [ -n "$res" ]; then
         if [ -d "$res" ]; then
             cmd="cd"
@@ -60,5 +60,5 @@ cmd rg_search ${{
 
 # Bindings
 map <c-g> :rg_search
-map <c-s> :fzf_jump
+map <c-f> :fzf_jump
 map i $LESSOPEN='| ~/.config/lf/scope.sh %s' batcat --paging=always $f

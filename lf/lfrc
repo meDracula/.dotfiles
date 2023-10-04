@@ -24,7 +24,7 @@ cmd open &{{
 
 # Bookmarks
 cmd bookmark_jump ${{
-    res="$(cat $LF_BOOKMARK_FILE | fzf))"
+    res="$(cat $LF_BOOKMARK_FILE | fzf)"
     lf -remote "send $id cd \"$res\""
 }}
 
@@ -62,3 +62,4 @@ cmd rg_search ${{
 map <c-g> :rg_search
 map <c-f> :fzf_jump
 map i $LESSOPEN='| ~/.config/lf/scope.sh %s' batcat --paging=always $f
+map <c-b> :bookmark_jump

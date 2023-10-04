@@ -29,8 +29,7 @@ cmd bookmark_jump ${{
 }}
 
 cmd bookmark_create ${{
-    read ans
-    echo $PWD > $LF_BOOKMARK_PATH/$ans
+    echo $PWD >> $LF_BOOKMARK_FILE
 }}
 
 # CD fzf

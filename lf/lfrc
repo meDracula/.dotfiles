@@ -24,7 +24,7 @@ cmd open &{{
 
 # Bookmarks
 cmd bookmark_jump ${{
-    res="$(cat $LF_BOOKMARK_PATH/$(ls $LF_BOOKMARK_PATH | fzf))"
+    res="$(cat $LF_BOOKMARK_FILE | fzf))"
     lf -remote "send $id cd \"$res\""
 }}
 

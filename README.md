@@ -8,7 +8,7 @@ My type of Dotfiles cocktail :cocktail: using [stow](https://www.gnu.org/softwar
 * **Dependencies**:
     - [ctpv](https://github.com/NikitaIvanovV/ctpv)
     - [bat](https://github.com/sharkdp/bat)
-    - [fzf](https://github.com/junegunn/fzf
+    - [fzf](https://github.com/junegunn/fzf)
     - [ripgrep](https://github.com/BurntSushi/ripgrep)
     - [fdfind](https://github.com/sharkdp/fd)
 

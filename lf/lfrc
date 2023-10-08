@@ -22,6 +22,18 @@ cmd open &{{
     esac
 }}
 
+cmd mkdir ${{
+    printf "Directory Name: "
+    read ans
+    mkdir $ans
+}}
+
+cmd mkfile ${{
+    printf "File Name: "
+    read ans
+    touch $ans
+}}
+
 # Bookmarks
 cmd bookmark_jump ${{
     res="$(cat $LF_BOOKMARK_FILE | fzf)"

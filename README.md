@@ -3,7 +3,7 @@ My type of Dotfiles cocktail :cocktail: using [stow](https://www.gnu.org/softwar
 
 ## Applications
 ### File manager
-**lf** - a terminal file manager written in Go with a heavy inspiration from ranger file manager.
+- **lf** - a terminal file manager written in Go with a heavy inspiration from ranger file manager.
 
 * **Dependencies**:
     - [ctpv](https://github.com/NikitaIvanovV/ctpv)

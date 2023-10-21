@@ -2,7 +2,9 @@
 My type of Dotfiles cocktail :cocktail: using [stow](https://www.gnu.org/software/stow/).
 
 The config uses a consistent colorscheme called **AURA THEME** developed by
+
 Github: [daltonmenezes/aura-theme](https://github.com/daltonmenezes/aura-theme/)
+
 <p align="center">
   <img src="./assets/aura-heading.png" alt="Aura Theme" width="70%" />
 </p>

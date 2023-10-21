@@ -270,5 +270,12 @@ lfcd () {
     cd "$(command lf -print-last-dir "$@")"
 }
 
+bindkey -s '^o' '^ulfcd\n'
+
+export LF_BOOKMARK_PATH="$HOME/.config/lf/bookmarks.txt"
+
+# Setting batcat -> sharkdp/bat highlight theme
+export BAT_THEME="ansi"
+
 # Starship
 eval "$(starship init zsh)"

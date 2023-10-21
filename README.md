@@ -1,21 +1,26 @@
 # dotfiles
 My type of Dotfiles cocktail :cocktail: using [stow](https://www.gnu.org/software/stow/).
 
+The config uses a consistent colorscheme called **AURA THEME** developed by
+
+Github: [daltonmenezes/aura-theme](https://github.com/daltonmenezes/aura-theme/)
+
+<p align="center">
+  <img src="./assets/aura-heading.png" alt="Aura Theme" width="70%" />
+</p>
+
 ## Applications
 ### File manager
-**lf** - a terminal file manager written in Go with a heavy inspiration from ranger file manager.
+- **lf** - a terminal file manager written in Go with a heavy inspiration from ranger file manager.
 
 * **Dependencies**:
-    - [ueberzug](https://github.com/jstkdng/ueberzugpp)
-    - [lynx](https://github.com/kurtchen/Lynx)
-    - [mediainfo](https://github.com/MediaArea/MediaInfo)
-    - [ffmpegthumbnailer](https://github.com/dirkvdb/ffmpegthumbnailer)
+    - [ctpv](https://github.com/NikitaIvanovV/ctpv)
     - [bat](https://github.com/sharkdp/bat)
-    - [pdftoppm](https://linux.die.net/man/1/pdftoppm)
-    - [atool](https://linux.die.net/man/1/atool)
-    - [odt2txt](https://github.com/dstosberg/odt2txt/)
-    - [djvused](https://linux.die.net/man/1/djvused)
-    - gnu/gpg
+    - [fzf](https://github.com/junegunn/fzf)
+    - [ripgrep](https://github.com/BurntSushi/ripgrep)
+    - [fdfind](https://github.com/sharkdp/fd)
+
+LF - Coloring mixer website: [lscolors](https://geoff.greer.fm/lscolors/)
 
 ### Terminal Emulator
 - **Alacritty** - A fast, cross-platform, OpenGL terminal emulator

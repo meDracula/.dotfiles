@@ -5,13 +5,4 @@ nvim
 tmux
 starship
 lf
-ueberzug
-lynx
-mediainfo
-ffmpegthumbnailer
-bat
-pdftoppm
-atool
-odt2txt
-gpg
-djvused
+ctpv

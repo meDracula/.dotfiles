@@ -5,19 +5,48 @@ set scrolloff 10
 set drawbox
 set hidden
 set relativenumber
-#set icons
 set period 1
-set cleaner '~/.config/lf/cleaner'
-set previewer '~/.config/lf/scope'
 set autoquit true
 
-# Bindings
-map <c-h> set hidden!
+# Previewer and cleaner
+set previewer ctpv
+set cleaner ctpvclear
+&ctpv -s $id
+&ctpvquit $id
 
 # Functions
-# fzf
+cmd open &{{
+    case $(file --mime-type -Lb $f) in
+        text/*) lf -remote "send $id \$$EDITOR \$fx";;
+        *) for f in $fx; do $OPENER $f > /dev/null 2> /dev/null & done;;
+    esac
+}}
+
+cmd mkdir ${{
+    printf "Directory Name: "
+    read ans
+    mkdir $ans
+}}
+
+cmd mkfile ${{
+    printf "File Name: "
+    read ans
+    touch $ans
+}}
+
+# Bookmarks
+cmd bookmark_jump ${{
+    res="$(cat $LF_BOOKMARK_FILE | fzf)"
+    lf -remote "send $id cd \"$res\""
+}}
+
+cmd bookmark_create ${{
+    echo $PWD >> $LF_BOOKMARK_FILE
+}}
+
+# CD fzf
 cmd fzf_jump ${{
-    res="$(fdfind --type f --hidden -E .git/ | fzf --reverse --header='Jump to location')"
+    res="$(fdfind --hidden -E .git/ | fzf --preview 'batcat --color=always --style=numbers {}' --reverse --header='Jump to location')"
     if [ -n "$res" ]; then
         if [ -d "$res" ]; then
             cmd="cd"
@@ -28,7 +57,6 @@ cmd fzf_jump ${{
         lf -remote "send $id $cmd \"$res\""
     fi
 }}
-map <c-s> :fzf_jump
 
 # fzf with ripgrep
 cmd rg_search ${{
@@ -42,4 +70,8 @@ cmd rg_search ${{
     [ -n "$res" ] && lf -remote "send $id select \"$res\""
 }}
 
+# Bindings
 map <c-g> :rg_search
+map <c-f> :fzf_jump
+map i $LESSOPEN='| ~/.config/lf/scope.sh %s' batcat --paging=always $f
+map <c-b> :bookmark_jump
